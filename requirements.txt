@@ -1,0 +1,5 @@
+python -m pip install celery
+python -m celery worker
+brew services start redis
+redis-cli shutdown
+python3 -m celery -A watarget worker   

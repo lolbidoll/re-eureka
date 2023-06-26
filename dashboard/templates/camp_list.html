@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1> Campaign List </h1>
+<a href="{% url 'campaign' %}">Create</a>
+
+{% if camp_list %}
+{% for camp in camp_list %}
+
+<h1>{{ camp }}
+
+{% endfor %}
+{% else %}
+
+<h1>No campaigns</h1>
+{% endif %}
+{% endblock content %}

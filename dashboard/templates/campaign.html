@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1> Campaign create page </h1>
+
+{% if toast %}
+{% for toast in toast %}
+
+<h1>{{ toast }}
+
+{% endfor %}
+{% endif %}
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="text" name="namee">
+    <input type="text" name="message">
+    <input type="file" name="file">
+    <input type="submit" value="Upload">
+</form>
+
+{% endblock content %}
